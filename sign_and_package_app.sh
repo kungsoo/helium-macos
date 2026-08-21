@@ -11,7 +11,7 @@ _package_revision=$(cat "$_root_dir"/revision.txt)
 # See https://github.com/ungoogled-software/ungoogled-chromium-macos/issues/17
 xattr -cs out/Default/Helium.app
 
-# Sign the binary (仅删除签名相关逻辑，你要的删除全部Apple相关env)
+# Sign the binary
 codesign --force --deep --sign - out/Default/Helium.app
 
 # Package the app
